@@ -55,6 +55,18 @@ a {
 
 .nav__link {
     color: #fff;
+    position: relative;
+}
+
+.nav__link:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 16px;
+    top: -3px;
+    background: url('../img/star.png') no-repeat center center;
 }
 
 .nav__link span{
@@ -66,7 +78,6 @@ a {
 }
 
 .menu--top {
-    width: 60%;
     text-align: right;
 }
 
@@ -83,7 +94,7 @@ a {
     width: 240px;
     left: 50%;
     margin-left: -120px;
-    top: 39%;
+    top: 56%;
 }
 
 .menu--single {
@@ -96,7 +107,7 @@ a {
 }
 
 .menu__item {
-    margin-left: 4%;
+    margin-left: 48px;
 }
 
 .menu__item:first-child {
@@ -125,7 +136,7 @@ a {
 
 .menu--footer__item {
     margin: 0;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 
@@ -225,8 +236,8 @@ a {
     border: 5px solid #46324f;
     border-radius: 50%;
     position: absolute;
-    left: 53%;
-    top: 36%;
+    left: 54%;
+    top: 34%;
 }
 
 .play-btn:hover {
@@ -547,21 +558,20 @@ a {
 
 .brands__list {
     text-align: center;
-    padding: 17px 0 33px 0;
 }
 
 .brands__item {
     display: inline-block;
     vertical-align: middle;
     width: 14%;
-    margin: 34px 5px 21px 3px;
+    margin: 23px 0px 25px 0px;
 }
 
 
 .recent {
     border-top: 1px solid #d8d8d8;
     border-bottom: 1px solid #fefefe;
-    padding: 10% 0 10% 0;
+    padding: 90px 0 80px 0;
     background-color: #ececec;
 }
 
@@ -705,6 +715,10 @@ a {
         font-size: 16px;
     }
 
+     .slider__image img {
+        width: 91%;
+    }
+
     .starts__title {
         font-size: 24px;
     }
@@ -753,6 +767,7 @@ a {
     .menu--single {
         display: block;
         text-align: center;
+        margin-bottom: 11px;
     }
     
     .menu--single:hover .menu--popup {
@@ -777,10 +792,28 @@ a {
         padding-left: 0; 
     }
 
+    .slider__image img {
+        width: 100%;
+    }
+
+    .slider__points {
+        left: 42%;
+        top: 106%;
+    }
+
+    .about {
+        padding: 74px 0px 51px 0px;
+    }
+
     .about__block {
         float: none;
         width: 100%;
         position: relative;
+        padding: 0px 0px 0 57px;
+    }
+
+    .about__text {
+        padding: 0.3em 0;
     }
     
     .slider {
@@ -788,12 +821,12 @@ a {
     }
 
     .slider__block--left {
-        width: 55%;
-        margin: 19% 3% 19% 3%;
+        width: 48%;
+        margin: 22% 0% 19% 3%;
     }
 
      .slider__block--right {
-        width: 39%;
+        width: 45%;
         position: static;
     }
     
@@ -803,14 +836,12 @@ a {
     }
 
     .play-btn {
-        left: 0;
-        right: 10%;
+        left: unset;
+        right: 13%;
+        top: 35%;
+        transform: scale(0.7);
     }
 
-    .slider__image img {
-        width: 100%;
-    }
-    
     .slider__points {
         /*right: 40%;*/
     }
@@ -824,8 +855,29 @@ a {
         width: 100%;
     }
 
+    .info {
+        padding-top: 70px;
+        padding-bottom: 87px;
+    }
+
+    .starts__block {
+        margin: 0px 0px 25px 17px;
+    }
+
+    .starts__title {
+        font-size: 30px;
+    }
+
+    .starts__title span {
+         display: inline;
+    }
+
     .brands__item {
         width: 28%;
+    }
+
+    .recent {
+        padding: 77px 0px 87px 0px;
     }
 
     .recent__block {
@@ -833,16 +885,28 @@ a {
     }
     
     .recent__block:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 10%;
+        margin-right: unset;
+        margin-bottom: 14%;
     }
 
     .updates {
-        padding: 30px 48px 0 60px;
+        padding: 40px 40px 0 56px;;
     }
 
     .updates__readmore {
         margin-right: -10px;
+    }
+
+    .updates__link {
+        letter-spacing: 0px;
+    }
+
+    .updates__posted {
+        letter-spacing: -0.2px;
+    }
+
+    .main-footer {
+        padding: 44px 0 76px 0;
     }
 
     .nav--bottom,
@@ -860,6 +924,8 @@ a {
 
     .main-footer__designed {
         text-align: center;
+        font-size: 12px;
+        margin-top: 24px;
     }
 
 }
@@ -873,7 +939,7 @@ a {
     }
 
     .menu--popup {
-        top: 36%;
+        top: 52%;
     }
 
     .nav__logo {
@@ -893,7 +959,7 @@ a {
         float: none;
         width: auto; 
         text-align: center;
-        margin: 16% 8% 12% 4%;
+        margin: 36% 8% 12% 4%;
     }
 
     .slider__block--right {
@@ -906,6 +972,7 @@ a {
 
     .about__block {
         margin-bottom: 7%;
+        padding: 0px 0px 0 64px;
     }
 
     .about__text {
@@ -917,22 +984,27 @@ a {
     }
 
     .info {
-        padding-top: 40px;
+        padding-top: 70px;
         padding-bottom: 85px;
     }
 
     .starts__block {
-        margin-right: 4px;
+        margin: 0px 1px 25px 26px;
         padding: 22px 16px 27px 34px;
     }
 
     .starts__title {
         margin-bottom: -2px;
+        font-size: 24px;
+    }
+
+    .starts__title span {
+        display: block;
     }
 
     .updates {
         padding: 0;
-        padding-top: 45px; 
+        padding-top: 39px;
     }
     
     .updates__readmore { 
@@ -942,7 +1014,7 @@ a {
     }
 
     .brands__list {
-        
+        padding: 28px 0 43px 0;
     }
 
 
@@ -959,7 +1031,7 @@ a {
     }
 
     .main-footer {
-        padding: 32px 0 32px 0;
+        padding: 7px 0 31px 0;
     }
 
 }
