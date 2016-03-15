@@ -78,6 +78,7 @@ a {
 
 .menu--top {
     text-align: right;
+    width: 77%;
 }
 
 .menu--popup {
@@ -106,7 +107,7 @@ a {
 }
 
 .menu__item {
-    margin-left: 48px;
+    margin-left: 5%;
 }
 
 .menu__item:first-child {
