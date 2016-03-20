@@ -11,7 +11,7 @@ for (var i = 0; i < names.length; i++) {
     if ( user === names[i] ) {
         var isLogin = true;
         alert( user + ', вы успешно вошли');
-    }    
+    }
 }
 
 if (!isLogin) {
