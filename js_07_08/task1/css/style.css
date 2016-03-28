@@ -1,0 +1,54 @@
+body {
+    font: 16px Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    margin: 50px auto;
+    padding: 20px;
+    width: 60%;
+    background-color: #eee;
+}
+
+.tabs {
+    background-color: #fff;
+}
+
+.tabs__nav {
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.tabs__item {
+    display: inline-block;
+}
+
+.tabs__link {
+    display: block;
+    padding: 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    background-color: #eee;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.tabs__link:not(.tabs__link--active):hover {
+    background-color: #ccc;
+    transform: skewX(-5deg) translateY(-2px);
+}
+
+.tabs__link--active {
+    background-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.tabs__text {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: -1px;
+    margin-bottom: 5px;
+}
