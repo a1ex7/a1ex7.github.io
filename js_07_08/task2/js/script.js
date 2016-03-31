@@ -1,32 +1,47 @@
 $(function() {
 
     var $formInput = $('.form__input');
+    var $helpButton = $('.btn-show-help');
+
+    var showTooltip = function(element) {
+        // Remove default title and save data from this
+        $(element)
+            .data('title', $(element).attr('title'))
+            .removeAttr('title');
+
+        // Create tooltip element, insert it and show
+        var $tooltip = $('<div class="tooltip">' + $(element).data('title') + '</div>');
+        $(element).after($tooltip);
+        $tooltip.fadeIn();
+    };
+
+    var hideTooltip = function(element) {
+        // Getting back title
+        $(element).attr('title', $(element).data('title'));
+
+        // Hide and remove tooltip
+        $('.tooltip').fadeOut('slow', function(element) {
+            $(element).remove();
+        });
+    };
 
     $formInput.hover(
 
         function() {
-
-            // Remove default title and save data from this
-            $(this)
-                .data('title', $(this).attr('title'))
-                .removeAttr('title');
-
-            // Create tooltip element, insert it and show
-            var $tooltip = $('<div class="tooltip">' + $(this).data('title') + '</div>');
-            $(this).after($tooltip);
-            $tooltip.fadeIn();
+            showTooltip(this);            
         },
         
         function () {
-
-            // Getting back title
-            $(this).attr('title', $(this).data('title'));
-
-            // Hide and remove tooltip
-            $('.tooltip').fadeOut('slow', function() {
-                $(this).remove();
-            });
+            hideTooltip(this);
         }
     );
+
+    $helpButton.on('click', function(e) {
+        e.preventDefault();
+        showTooltip($formInput);
+        setTimeout(function() {
+            hideTooltip($formInput);
+        }, 1000);
+    });
 
 });

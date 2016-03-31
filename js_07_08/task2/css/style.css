@@ -23,10 +23,17 @@ label {
     width: 100px;
 }
 
-input {
+input,
+button {
     border: 1px solid #d6d6d6;
     line-height: 1.5em;
     padding: 5px 10px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ccc;
+    cursor: pointer;
 }
 
 .tooltip {
