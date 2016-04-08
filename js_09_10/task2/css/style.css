@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px 'Ubuntu', Arial, sans-serif;
+    background-color: #323232;
+    color: #fff;
+    line-height: 1.5em;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 1em 0 0.6em 0;
+} 
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.4em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+nav a:hover {
+    color: #323232;
+}
+
+.menu {
+    background-color: #FF6464;
+    padding: 10px 0;
+}
+
+.menu__list {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.menu__item {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+
+.menu__item--dropdown:after {
+    content: '▾';
+    position: absolute;
+    top: 8px;
+    left: 90%;
+    color: #fff;
+}
+
+.menu__link {
+    padding: 10px 15px;
+}
+
+.submenu {
+    display: none;
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 200px;
+    background-color: #E14B4B;
+    padding: 0 10px;
+}
+
+.submenu__item {
+    position: relative;
+}
+
+.submenu__item--dropdown:after {
+    content: '▸';
+    position: absolute;
+    top: 8px;
+    left: 90%;
+    color: #fff;
+}
+
+.submenu__item .submenu {
+    top: 0;
+    left: 100%;
+}
+
+.submenu__link {
+    padding: 10px 0;
+    border-bottom: solid 1px #C83232;
+}
+
+.submenu__item:last-child .submenu__link{
+    border-bottom: none;
+}
+
+.main__text {
+    margin: 0 auto;
+    padding: 30px 10%;
+    background-color: #fff;
+    color: #323232;
+}
+
+
+/* ============== CSS ============== */
+
+/* [class$="dropdown"]:hover > .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+ */

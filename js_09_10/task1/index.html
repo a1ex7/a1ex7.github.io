@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Java Script 7-8</title>
+  <link rel="stylesheet" href="css/jcarousel.basic.css">
+  <link rel="stylesheet" href="css/chosen.css">
+  <link rel="stylesheet" href="css/checkbox.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+
+  <!-- ===================== jCarousel =================================================== -->
+
+  <h1>Carousel with jCarousel</h1>
+  <div class="jcarousel-wrapper">
+
+
+    <div class="jcarousel">
+      <ul>
+        <li><img src="http://lorempixel.com/600/400/nature/1" width="600" height="400" alt=""></li>
+        <li><img src="http://lorempixel.com/600/400/nature/2" width="600" height="400" alt=""></li>
+        <li><img src="http://lorempixel.com/600/400/nature/3" width="600" height="400" alt=""></li>
+        <li><img src="http://lorempixel.com/600/400/nature/4" width="600" height="400" alt=""></li>
+        <li><img src="http://lorempixel.com/600/400/nature/5" width="600" height="400" alt=""></li>
+      </ul>
+    </div>
+    
+    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+    
+    <p class="jcarousel-pagination"></p>
+  </div>
+
+
+
+  <!-- ========================= Chosen ================================================ -->
+
+  <h1>Custom select with 'Chosen' jQuery Plugin</h1>
+  <div class="select-wrapper">
+    
+    <select class="select__country" data-placeholder="Выберите страну..." name="country" multiple>
+      <option value="1">Россия</option>
+      <option value="2">Украина</option>
+      <option value="3">Чехия</option>
+      <option value="4">Словакия</option>
+      <option value="5">Румыния</option>
+      <option value="6">Болгария</option>
+      <option value="7">Польша</option>
+      <option value="8">Германия</option>
+      <option value="9">Франция</option>
+      <option value="10">Англия</option>
+      <option value="11">Испания</option>
+      <option value="12">Аравия</option>
+    </select>
+      
+  </div>
+
+
+  <!-- ========================= Custom Checkbox ================================================ -->
+
+  <h1>Custom checkBox with jQuery</h1>
+
+  <div class="checkbox-wrapper">
+    <form action="#">
+      <div>
+        <span class="niceCheck">
+          <input type="checkbox" name="skills[]" id="ch1" value="1">
+        </span>
+        <label for="ch1">HTML5, CSS3</label>
+      </div>
+      <div>
+        <span class="niceCheck">
+          <input type="checkbox" name="skills[]" id="ch2" checked="checked" value="2">
+        </span>
+        <label for="ch2">Java Script, jQuery</label>
+      </div>
+      <div>
+        <span class="niceCheck">
+          <input type="checkbox" name="skills[]" id="ch3" checked="checked" value="3" disabled>
+        </span>
+        <label for="ch3">Bootstrap, Pure</label>
+      </div>
+    </form>
+  </div>
+
+  <h1>Custom checkBox with CSS</h1>
+  
+  <div class="checkbox-wrapper">
+    <form action="#">
+      <div class="css-checkbox">
+        <input type="checkbox" name="skills[]" id="ch4" checked="checked" value="4">
+        <label for="ch4"><span class="cssCheck"></span> Backbone.js</label>
+      </div>
+      <div class="css-checkbox">
+        <input type="checkbox" name="skills[]" id="ch5" value="5">
+        <label for="ch5"><span class="cssCheck"></span> Angular</label>
+      </div>
+      <div class="css-checkbox">
+        <input type="checkbox" name="skills[]" id="ch6" checked="checked" value="6" disabled>
+        <label for="ch6"><span class="cssCheck"></span> React</label>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.jcarousel.min.js"></script>
+  <script src="js/chosen.jquery.min.js"></script>
+  <script src="js/jquery.checkbox.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

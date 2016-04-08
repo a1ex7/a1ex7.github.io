@@ -1,0 +1,18 @@
+body {
+    font: 16px Arial, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.select-wrapper,
+.checkbox-wrapper {
+    width: 600px;
+    margin: 20px auto;
+}

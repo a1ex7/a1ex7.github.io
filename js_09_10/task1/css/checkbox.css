@@ -1,0 +1,39 @@
+.niceCheck,
+.cssCheck {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url('../img/checkbox.png');
+    overflow: hidden;
+}
+
+/* hide original checkbox */
+.niceCheck input {
+    margin-left: -100px;
+}
+
+.niceCheckDisabled {
+    background: url('../img/checkbox-disabled.png');
+}
+
+.niceChecked {
+    background-position: 0 -17px;
+}
+
+
+
+/* ============== css checkbox style ========= */
+
+/* hide original checkbox */
+.css-checkbox input {
+    display: none;
+} 
+
+input[type=checkbox]:disabled + label > .cssCheck{
+    background: url('../img/checkbox-disabled.png');
+}
+
+input[type=checkbox]:checked + label > .cssCheck{
+    background-position: 0 -17px;
+}
