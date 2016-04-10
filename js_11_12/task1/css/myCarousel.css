@@ -1,0 +1,38 @@
+.myCarousel-list {    
+    list-style: none;
+    width: 10000px;
+    position: relative;
+}
+ 
+.myCarousel-element {
+    display: inline-block;
+    margin-right: 25px;
+    float: left;
+}
+ 
+.myCarousel-element img {
+    max-width: 200px;
+}
+
+.myCarousel-hider {
+    width: 650px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+.myCarousel-arrow-left,
+.myCarousel-arrow-right {
+    float: left;
+    display: block;
+    border: 1px solid grey;
+    background-color: lightgrey;
+    padding: 5px;
+    margin: 50px 25px;
+}
+
+.myCarousel-arrow-left:hover,
+.myCarousel-arrow-right:hover {
+    cursor: pointer;
+    background-color: grey;
+}

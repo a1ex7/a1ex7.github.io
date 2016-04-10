@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Java Script 11-12</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <script type="text/template">
+    <div class="wrapper">
+          <main class="main-content">
+            <header class="header-info">
+              <h1 class="name"><%= user.name %></h1>
+              <img src="<%= user.avatar %>" alt="Фотография">
+              <p><%= user.role %></p>
+            </header>
+            <section class="features">
+              <p>Хочу учить фронтэнд, потому что</p>
+              <ul>
+                <% for (var i = 0; i < skills.length; i++) { %>
+                  <li><%= skills[i].text %></li>
+                <% } %>
+              </ul>
+            </section>
+            <section class="contacts">
+              <p>
+                Мой контактный телефон<br>
+                <%= contacts.phone %>
+              </p>
+              <p>
+                Мой профиль во вКонтакте<br>
+                <a href="<%= contacts.social %>">vk.com</a>
+              </p>
+            </section>
+            <section class="feedback">
+              <p>
+                Мой фидбэк:<br>
+                <%= feedback.text %>
+              </p>
+            </section>  
+          </main>
+      </div>  
+  </script>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/simpleJSTemplating.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
