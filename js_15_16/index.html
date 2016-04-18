@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Java Script 7-8</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <div class="wrapper">
+    <div class="search-block">
+      <img class="search__logo" src="img/googlelogo.png" alt="Logo" width="167">
+      <form action="" method="GET" id="search__form">
+        <input type="text" class="search__input" placeholder="Найти...">
+        <input type="submit" value="Поиск" class="search__button">
+      </form>
+    </div>
+    <div class="result-block">
+      <script type="text/template" id="result__tpl">
+        <div class="result__stats">
+          Результатов: примерно <%= cursor.resultCount %> (<%= cursor.searchResultTime %> сек.)
+        </div>
+        <% for(i = 0; i < results.length; i++) { %>
+          <div class="result__item">
+          <h3 class="result__title">
+            <a class="result__link" href="<%- results[i].unescapedUrl %>"><%= results[i].title %></a>
+          </h3>
+            <cite class="result__url"><%= results[i].unescapedUrl %></cite>
+            <p class="result__description"><%= results[i].content %></p>
+          </div>
+          
+        <% }; %>
+      </script>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
