@@ -26,7 +26,7 @@
           <h3 class="result__title">
             <a class="result__link" href="<%- results[i].unescapedUrl %>"><%= results[i].title %></a>
           </h3>
-            <cite class="result__url"><%= results[i].unescapedUrl %></cite>
+            <cite class="result__url"><%= decodeURIComponent(results[i].unescapedUrl) %></cite>
             <p class="result__description"><%= results[i].content %></p>
           </div>
           
