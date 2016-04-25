@@ -9,6 +9,9 @@
     var currentLeftValue = 0;
     var carouselList = this.children('ul').addClass('myCarousel-list');
 
+    var elementsCount = carouselList.find('li').length;
+    var minimumOffset = - ((elementsCount - 3) * settings.offset);
+    var maximumOffset = 0;
 
     carouselList.children('li').addClass('myCarousel-element');
     
@@ -19,15 +22,17 @@
 
 
     $('.myCarousel-arrow-left').on('click', function() {
-        if (currentLeftValue < 0) {
+        if (currentLeftValue < maximumOffset) {
             currentLeftValue += settings.offset;
             carouselList.animate({left: currentLeftValue + "px"}, 400);
         }
     });
 
     $('.myCarousel-arrow-right').on('click', function() {
-        currentLeftValue -= settings.offset;
-        carouselList.animate({left: currentLeftValue + "px"}, 400);
+        if (currentLeftValue > minimumOffset) {
+            currentLeftValue -= settings.offset;
+            carouselList.animate({left: currentLeftValue + "px"}, 400);
+        }
     });
 
     return this;
