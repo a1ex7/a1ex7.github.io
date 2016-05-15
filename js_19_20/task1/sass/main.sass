@@ -1,0 +1,428 @@
+@import variables
+@import defaults
+@import '../css/owl.carousel'
+
+/* ========= HEADER ================= */
+.main-head
+  margin-top: 35px
+
+.logo
+  float: left
+  padding-left: 50px
+  background: url('../img/logo.png') no-repeat 5px 6px
+  &__title
+    font: 30px/32px $header-font
+    color: #434343
+  &__description
+    font: 12px/12px 'Ubuntu Light', sans-serif
+    text-transform: uppercase
+    letter-spacing: 3.5px
+    color: rgba(51,51,51,0.65)
+
+.social
+  float: right
+  &__list
+    line-height: 40px
+  &__item
+    vertical-align: middle
+  &__link
+    +hide-text
+    display: block
+    +size(18px)
+    margin: 6px
+    background-color: $base-color
+    background: url('../img/social.png') no-repeat
+    &--facebook
+      background-position: 4px 0px
+      &:hover
+        background-position: 4px -18px  
+    &--twitter
+      background-position: -15px 0px
+      &:hover
+        background-position: -15px -18px
+    &--rss
+      background-position: -34px 0px
+      &:hover
+        background-position: -34px -18px
+    &--linkedin
+      background-position: -54px 0px
+      &:hover
+        background-position: -54px -18px
+    &--skype
+      background-position: -75px 0px
+      &:hover
+        background-position: -75px -18px
+    
+
+.topbar
+  margin-top: 35px
+  background-color: $section-color
+  color: #fff
+  overflow: hidden
+  &__menu
+    float: left
+  &__search
+    float: right
+.top-menu
+  &__link
+    display: block
+    color: #fff
+    text-transform: uppercase
+    padding: 20px 35px
+    font: 14px 'Ubuntu Light', sans-serif // Condensed
+    letter-spacing: -0.5px
+    border-right: 1px solid #181a1d
+    &--active
+      background-color: $second-color
+    &:hover
+      color: $base-color
+
+  &__search
+    position: relative
+
+.search
+  &__input
+    font-size: 14px
+    margin: 8px
+    padding: 5px 35px 5px 12px
+    color: #fff
+    width: 241px
+    height: 40px
+    background: rgba(255, 255, 255, 0.05) url('../img/ico-search.png') no-repeat 215px center
+    border: 1px solid #181a1d
+    +placeholder
+      color: rgba(255,255,255,0.15)
+      font-size: 12px
+  
+
+/* ========= SLIDER ================= */
+
+.slider
+  @extend %centered
+  position: relative
+  margin-top: 40px
+  &__promo
+    position: absolute
+    z-index: 2
+    left: 75px
+    bottom: 35px
+    color: #fff
+    background-color: rgba(26,26,26,0.9)
+    padding: 30px
+    font: 54px $header-font
+    line-height: 52px
+    text-transform: uppercase
+    span
+      color: $base-color
+
+.owl-carousel
+  position: relative
+.owl-controls
+  position: absolute
+  width: 100%
+  bottom: 0
+
+.owl-dots
+  text-align: center
+  .owl-dot
+    display: inline-block
+    +size(15px)
+    background: #fff
+    margin: 7px
+    span
+      +size(60%)
+      margin: 3px
+      background: #fff
+      display: block
+      transition: all 200ms ease
+    &.active,
+    &:hover
+      span
+        background-color: #001d1d
+/* ========= ADVANTAGES ================= */
+
+.advantages
+  width: $wrapper
+  margin: 0 auto
+  padding: 60px 0 60px 40px
+
+.advantage
+  float: left
+  width: calc(33.33% - 40px)
+  margin-right: 40px
+  &__title
+    font: 20px $header-font
+    color: $header-color
+    position: relative
+    &:before
+      position: absolute
+      left: 120px
+      top: 25px
+      content: ''
+      display: block
+      +size(32px)
+      background-color: $base-color
+      background: url('../img/advantages.png')
+    &--settings
+      &:before
+        background-position: 0 -35px
+    &--params
+      &:before
+        background-position: -36px -37px
+    &--truck
+      &:before
+        background-position: -71px -39px
+  &__number
+    font-size: 90px
+    opacity: 0.1
+    display: inline-block
+    margin-right: -4px
+    width: 120px
+  &__description, &__link
+    padding: 10px 0
+    padding-left: 120px
+    line-height: 20px
+  &__link
+    color: $header-color
+    font-family: $header-font
+    &:after
+      content: ''
+      display: inline-block
+      margin-left: 10px
+      +size(10px)
+      +bg-center('../img/ico-right-arrow.png')
+    &:hover
+      color: $second-color
+
+/* ========= SERVICES ================= */
+
+.services
+  color: #fff
+  background-color: $section-color
+  padding: 40px 0 60px 0
+  &__title
+    font: 24px $header-font
+.service
+  float: left
+  margin-right: 40px
+  &:last-child
+    margin-right: 0
+  &__link
+    display: block
+    +size(260px)
+    margin: 35px 0
+    position: relative
+    &:after
+      transition: all 0.3s ease-in
+      content: ''
+      display: block
+      +size(100%)
+      +bg-center('../img/ico-plus.png')
+      background-color: $second-color
+      opacity: 0
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      
+  &__caption
+    font: 16px $header-font
+    text-align: center
+    cursor: pointer
+  &__item:hover &__caption
+    color: $base-color
+  &__item:hover &__link:after
+    opacity: 0.9
+
+/* ========= LATEST NEWS ================= */
+
+.news-banners
+  background-color: #f7f7f7
+
+.news
+  float: left
+  width: 50%
+  margin: 50px 0
+  &__title
+    font: 24px $header-font
+    color: $section-color
+    margin: 10px 0 40px 0
+  &__item
+    position: relative
+    margin-bottom: 30px
+  &__picture
+    float: left
+  &__date
+    font: 15px $header-font
+    width: 40px
+    height: 80px
+    position: absolute
+    left: -17px
+    top: 12px
+    &--month, &--day
+      display: block
+      width: 40px
+      height: 40px
+      text-align: center
+      line-height: 40px
+    &--month
+      color: #fff
+      background-color: $second-color
+    &--day
+      color: $header-color
+      background-color: $base-color
+  &__info
+    float: left
+    width: calc(100% - 150px)
+    padding: 0 30px
+  &__link
+    font: 16px $header-font
+    color: $header-color
+    &:hover
+      color: $second-color
+  &__author, &__comments
+    display: inline-block
+    &--link
+      color: $second-color
+  &__text
+    margin-top: 20px
+
+/* ========= BANNERS ================= */
+
+.banners
+  float: left
+  width: 50%
+  margin: 50px 0
+  &__title
+    @extend .news__title
+
+.accordion
+  &__trigger
+    display: block
+    border-right: 1px solid #e8e8e8
+    position: absolute
+    left: 0
+    +size(40px)
+  &__icon
+    display: block
+    +size(10px)
+    margin: 15px
+    background: url('../img/sighn.png') no-repeat
+    background-position: -10px -10px
+  &__title
+    display: block
+    position: relative
+    font: 13px $header-font
+    text-transform: uppercase
+    height: 40px
+    line-height: 40px
+    padding: 0 10px 0 50px
+    cursor: pointer
+  &__text
+    padding: 30px 10px 30px 40px
+  &__item
+    margin-bottom: 5px
+    &--closed
+      .accordion__title
+        color: $section-color
+        background-color: #fff
+        border: 1px solid #e8e8e8
+        &:hover
+          background-color: $base-color
+      .accordion__icon
+        background-position: 0 0
+      .accordion__text
+        display: none 
+    &--open
+      .accordion__title
+        color: #fff
+        background-color: $base-color
+      .accordion__trigger
+        border-right: 1px solid #f6c53d
+      .accordion__text
+        display: block
+      .accordion__icon
+        background-position: -10px -10px
+
+
+/* ========= BRANDS ================= */
+
+.brands
+  @extend %centered
+  padding: 60px 0
+  &__list
+    text-align: center
+  &__item
+    padding: 20px
+    &:first-child
+      padding-left: 5px
+    &:last-child
+      padding-right: 5px
+  &__link
+    transition: opacity 0.2s ease
+    &:hover
+      opacity: 0.4
+
+/* ========= FOOTER ================= */
+
+footer
+  background-color: $section-color
+
+.footer-menu
+  color: #fff
+  padding: 30px 0 40px 0
+  &__item
+    width: 25%
+    padding: 20px
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+  &__title
+    font: 16px $header-font
+    color: #fff
+    text-transform: uppercase
+    margin-bottom: 30px
+  &__subitem
+    display: block
+  &__link
+    display: block
+    color: rgba(255,255,255, 0.3)
+    padding: 10px 3px
+    border-bottom: 1px solid #393c40
+    &:hover
+      color: $second-color
+
+.copiright
+  background-color: rgba(255,255,255, 0.05)
+  padding: 20px 0
+  &__contacts
+    float: left
+  &__text
+    float: right
+.contacts
+  &__item
+    margin-right: 35px
+  &__link
+    color: rgba(255,255,255, 0.3)
+    position: relative
+    padding-left: 20px
+    &:hover
+      color: #fff
+    &:before
+      content: ''
+      display: block
+      +size(18px)
+      background: url('../img/contacts.png') no-repeat
+      position: absolute
+      left: 0
+    &--address
+      &:before
+        background-position: 0 2px
+    &--phone
+      &:before
+        background-position: -20px 2px
+    &--mail
+      &:before
+        background-position: -42px 3px

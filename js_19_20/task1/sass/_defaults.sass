@@ -1,0 +1,37 @@
+*,
+*:after,
+*:before
+  box-sizing: border-box
+
+.clearfix:before,
+.clearfix:after
+  content: ''
+  display: table 
+
+.clearfix:after
+  clear: both
+
+body
+  font: $text-font
+  color: $text-color
+  background-color: $background-color
+  line-height: 20px
+
+a,
+a:hover,
+a:visited,
+a:active,
+a:focus
+  text-decoration: none
+
+input,
+input:focus
+  outline: none
+
+li
+  display: inline-block
+  margin-left: -4px // fix inline block spacing  
+
+.main-head,
+.inner
+  @extend %centered

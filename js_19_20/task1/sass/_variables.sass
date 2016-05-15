@@ -1,0 +1,46 @@
+$text-font: 13px Arial, sans-serif
+$header-font: 'Ubuntu', sans-serif
+
+$base-color: #f4b60d
+$second-color: #248cec
+$background-color: #fff
+$section-color: #2a2d32
+$text-color: #8a8a8a
+$header-color: #2a2b2e
+
+$wrapper: 1240px
+
+
+=size($size)
+  width: $size
+  height: $size
+
+=round($radius: 50%)
+  border-radius: $radius
+
+=bg-center($url)
+  background: url($url) center center no-repeat
+
+=hide-text()
+  text-indent: -1000px
+  overflow: hidden
+
+=crop-text()
+  overflow: hidden
+  white-space: nowrap
+  text-overflow: ellipsis
+
+=placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+%centered
+  width: $wrapper
+  margin: 0 auto
+  padding: 0 40px
