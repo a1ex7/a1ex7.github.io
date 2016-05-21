@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MVC</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script data-main="js/main" src="js/require.js"></script>
+</head>
+<body>
+
+<h1>ToDo list</h1>
+
+<script type="text/template" id="wrapper-template">
+	<div class="wrapper">
+  	<div class="controlls">
+  		<input type="text" class="item-value">
+  		<button class="item-add">Add</button>
+  	</div>
+    <ul class="item-list"></ul>
+  </div>
+</script>
+
+<script type="text/template" id="list-template">
+  <% for(var i = 0; i < data.length; i++){ %>
+    <li>
+      <div class="todo-item"><%= data[i] %></div>
+      <span data-value="<%= data[i] %>" class="item-edit">edit</span>
+      <span data-value="<%= data[i] %>" class="item-delete">x</span>
+    </li>
+  <% };%>
+</script>
+
+</body>
+</html>
