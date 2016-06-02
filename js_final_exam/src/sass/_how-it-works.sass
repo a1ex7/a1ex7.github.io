@@ -1,0 +1,43 @@
+/* ================= HOW IT WORKS ======================= */
+
+.how-it-works
+  margin-top: 3px
+  &__title
+    @extend %title
+  &__step
+    margin: 5px 10px
+    position: relative
+    height: 240px
+  &__img
+    height: 100%
+    overflow: hidden
+    +round(4px)
+    position: relative
+    z-index: 0
+    &:before
+      +cover(#ff8523)
+    &:after
+      +cover()
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%)
+    img
+      +opacity(0.9)  
+  &__btn
+    +button($base-color, $base-color)
+    padding: 3px 13px
+    +round(10px)
+    text-transform: uppercase
+    font-size: 10px
+    letter-spacing: 1.6px
+  &__step-caption
+    padding: 17px 20px
+    position: absolute
+    left: 0
+    bottom: 0
+  &__step-title
+    font: 24px $title-font-family
+    color: $header-color
+    margin-top: 15px
+  &__text
+    margin-top: 10px
+    line-height: 1.25
+    color: #ccc

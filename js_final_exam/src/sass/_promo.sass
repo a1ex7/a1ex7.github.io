@@ -1,0 +1,41 @@
+/* ================== PROMO ==================*/
+
+.promo
+  color: $header-color
+  text-align: center
+  background: url('../img/bg-cover.png'), url('../img/bg-header.jpg')
+  background-position: 0 0, center center
+  background-repeat: repeat, no-repeat
+  background-size: cover
+  &__topbar
+    font: 14px $header-font-family
+  &__user
+    padding: 20px 20px 40px 20px
+  &__login
+    margin-right: 16px
+    &:hover
+      color: $title-color
+  &__sign-btn
+    +reset-btn()
+    +button(transparent, #fff)
+    font-size: 14px
+  &__logo
+    font-size: 20px
+    letter-spacing: 1.2px
+    text-transform: uppercase
+    padding: 74px 20px 28px 20px
+  &__logo-link
+    &:hover
+      color: $title-color
+  &__title
+    font: $header-font
+    text-transform: uppercase
+    margin-bottom: 8px
+  &__text
+    font-size: 18px
+    margin: 8px 40px 8px 40px
+    line-height: 1.2
+  &__action-btn
+    +button($base-color, $base-color)
+    margin: 10px 25px 140px 25px
+    width: cp(280px)

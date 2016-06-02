@@ -1,0 +1,28 @@
+/* ================= SEARCH ======================= */
+
+.search
+  text-align: center
+  padding-bottom: 39px
+  &__title
+    @extend %title
+    padding: 16px 15px 5px 15px
+  &__text
+    font-size: 18px
+    margin-bottom: 15px
+    margin-top: 3px
+  &__input
+    display: block
+    width: cp(280px)
+    margin: 10px auto
+    height: em(40px)
+    border: 1px solid #ccc
+    +round(4px)
+    box-shadow: 0 1px 0 #eee
+    font-size: 14px
+    padding: 13px
+  &__button
+    +reset-btn
+    +button($base-color, $base-color)
+    width: cp(280px)
+    font-size: 14px
+    margin: 2px 5px

@@ -1,0 +1,72 @@
+*,
+*:after,
+*:before
+  box-sizing: border-box
+
+.clearfix:before,
+.clearfix:after
+  content: ''
+  display: table 
+
+.clearfix:after
+  clear: both
+
+html,
+body,
+.wrapper
+    height: 100%
+
+body > .wrapper
+    height: auto
+    min-height: 100%
+
+a
+    text-decoration: none
+    color: inherit
+    transition: all 0.2s ease
+
+img
+    display: block
+    width: 100%
+    
+body
+    font: $base-font
+    color: $text-color
+
+.wrapper
+    // width: 940px
+    width: $center-width
+    margin: 0 auto
+    border-left: 1px solid gray
+    border-right: 1px solid gray
+    transition: all 0.3s ease
+
+%title
+    color: $title-color
+    font: $title-font
+    text-align: center
+    padding: 30px 15px 10px 15px
+
+[class^="icon-"]
+    display: block
+    // position: absolute
+    // left: 50%
+    // top: 50%
+    // margin-top: -9px
+    // margin-left: -9px
+
+// Masonry styles
+
+.ideas__grid
+    padding: 10px
+
+.grid-sizer
+    width: 94% // for ie8
+    width: calc(100% - 20px)
+
+.ideas__item
+    width: 94% // for ie8
+    width: calc(100% - 20px)
+    margin-bottom: 10px
+
+

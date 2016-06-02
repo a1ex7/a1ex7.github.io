@@ -1,0 +1,135 @@
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  $center-width: 768px
+  
+  .wrapper
+    width: $center-width
+
+  .promo
+    padding-bottom: 222px
+    &__logo, &__user
+      width: 50%
+      padding-top: 38px
+      padding-bottom: 120px
+    &__logo
+      float: left
+      text-align: left
+      line-height: 37px
+      padding-left: 48px
+    &__user
+      float: right
+      text-align: right
+      padding-right: 50px
+    &__action-btn
+      width: auto
+      margin: 11px 23px
+      padding: 10px 20px
+    &__title
+      font-size: 52px
+      margin: 20px 85px
+    &__text
+      font-size: 24px
+      margin: 23px 40px
+
+  .owl-carousel
+    float: left
+    width: 30% //ie8
+    width: calc(33.33% - #{$gutter})
+    margin: 10px
+    height: 400px
+
+  .how-it-works
+    // padding-top: 61px
+    &__title
+      padding: 90px 15px 25px 15px
+    &__step
+      margin: 0
+      height: 400px
+    &__img
+      height: 100%
+  
+  .partners
+    .wrapper
+      padding-left: 127px
+      padding-right: 126px
+    &__title
+      padding: 87px 19px 10px 15px
+    &__partner
+      float: left
+      width: 45% //ie8
+      width: calc(50% - #{$gutter})
+    &__info
+      margin: 13px 10px 25px 10px
+    &__link
+      width: auto
+      padding: 9px 27px
+  
+  .grid-sizer
+    width: 30% //ie8
+    width: calc(33.333% - 13px)
+  
+  .ideas
+    &__title
+      padding: 96px 15px 23px 15px
+    &__grid
+    padding: 0
+    &__item
+      width: 30% //ie8
+      width: calc(33.333% - 13px)
+      height: 310px
+      margin-bottom: 20px
+    &__item--width2
+      width: 62% //ie8
+      width: calc(66.666% - 6px)
+
+  .search
+    &__input, &__button
+      display: inline-block
+    &__input
+      width: cp(240px, $center-width)
+    &__button
+      width: cp(160px, $center-width)
+
+  .footer
+    &__logo,
+    &__nav,
+    &__copy
+      display: inline-block
+      width: 20%
+      width: calc(25% - 8px)
+      vertical-align: top
+      margin-top: 40px
+    &__menu-item
+      display: block
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  .wrapper
+    width: 940px
+
+  .how-it-works
+    &__step
+
+  .partners
+    &__partner
+      width: 22%
+      width: calc(25% - #{$gutter})
+      
+  
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  /*
