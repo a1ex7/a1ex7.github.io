@@ -87,14 +87,19 @@
     padding: 0
     &__item
       width: 30% //ie8
-      width: calc(33.333% - 13px)
+      width: calc(33.333% - #{$gutter})
       height: 310px
       margin-bottom: 20px
     &__item--width2
       width: 62% //ie8
-      width: calc(66.666% - 6px)
+      width: calc(66.666% - #{$gutter})
 
   .search
+    padding-bottom: 90px
+    &__title
+      padding: 65px 18px 19px 15px
+    &__text
+      margin: 10px 18px 27px 15px
     &__input, &__button
       display: inline-block
     &__input
@@ -108,28 +113,16 @@
     &__copy
       display: inline-block
       width: 20%
-      width: calc(25% - 8px)
+      width: calc(25% - 13px)
       vertical-align: top
-      margin-top: 40px
+      margin-top: 37px
+    &__menu
+      text-align: left
+      margin: 10px 5px 10px 47px
     &__menu-item
       display: block
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-  .wrapper
-    width: 940px
-
-  .how-it-works
-    &__step
-
-  .partners
-    &__partner
-      width: 22%
-      width: calc(25% - #{$gutter})
-      
-  
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-  /*
+      padding: 2px 5px
+    &__copy-text
+      margin-top: 1px
+    &__copy-logo
+      margin: 7px auto

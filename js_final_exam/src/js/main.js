@@ -68,14 +68,7 @@ $(function() {
             }
         })
         .done(function(data) {
-          console.log(data);
             showResults(data);
-        })
-        .fail(function() {
-            console.log("error");
-        })
-        .always(function() {
-            console.log("complete");
         });
         
     })

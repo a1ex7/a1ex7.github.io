@@ -1,0 +1,60 @@
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  $center-width: 960px
+    
+  .wrapper
+    width: $center-width
+
+  .promo
+    &__logo
+      padding-left: 9px
+    &__user
+      padding-right: 9px
+    &__title
+      margin: 20px 185px
+
+  .how-it-works
+    &__step
+
+  .partners
+    .wrapper 
+      padding: 0
+    &__partner
+      width: 22%
+      width: calc(25% - #{$gutter})
+
+  .search
+    padding-bottom: 92px
+    &__input
+      width: cp(240px, $center-width)
+    &__button
+      width: cp(160px, $center-width)
+      padding: 9px 15px
+      
+  .footer
+    padding-bottom: 25px
+    &__logo,
+    &__nav
+      text-align: left
+    &__logo
+      margin-left: 0
+      margin-right: 0
+      width: cp(240px, $center-width)
+    &__nav
+      width: cp(160px, $center-width)
+    &__menu
+      margin-left: 0
+      &-item
+        padding: 2px 1px
+    &__copy
+      width: cp(380px, $center-width)
+      text-align: right
+      &-logo
+        display: inline-block
+        margin: 7px 4px
+  
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  /*
