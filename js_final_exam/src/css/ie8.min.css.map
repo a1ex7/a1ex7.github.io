@@ -1,0 +1,1 @@
+{"version":3,"sources":["ie8.css"],"names":[],"mappings":"AAAA,OACE,oCAAwC,CAAE,AAE5C,0CACE,YAAc,CAAE","file":"ie8.min.css","sourcesContent":[".promo {\n  background: url(\"../img/bg-header.jpg\"); }\n\n.footer__copy-logo.footer__copy-logo--svg {\n  display: none; }\n\n/*# sourceMappingURL=ie8.css.map */\n"]}

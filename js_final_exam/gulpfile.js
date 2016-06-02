@@ -11,12 +11,15 @@ var imagemin        = require('gulp-imagemin');
 var pngquant        = require('imagemin-pngquant');
 var cache           = require('gulp-cache');
 var autoprefixer    = require('gulp-autoprefixer');
-var svgmin          = require('gulp-svgmin');
-var iconify         = require('gulp-iconify');
-var notify          = require("gulp-notify");
+// var svgmin          = require('gulp-svgmin');
+// var iconify         = require('gulp-iconify');
+var notify          = require('gulp-notify');
 var spritesmith     = require('gulp.spritesmith');
 
 
+
+//  Sass compiler and autoprefixer
+ 
 gulp.task('sass', function() {
     return gulp.src('src/sass/**/*.sass')
     .pipe(sourcemaps.init())
@@ -29,30 +32,41 @@ gulp.task('sass', function() {
     .pipe(browserSync.reload({stream: true}));
 });
 
+
+// Pack 3-rd party scripts
+
 gulp.task('scripts', function() {
     return gulp.src([
-        'src/libs/jquery-1.12.4.min/index.js',
-        // 'src/libs/lodash/dist/lodash.min.js',
+        'src/libs/jquery-1.12.4.min.js',
         'src/libs/masonry.pkgd.min.js',
         'src/libs/imagesloaded.pkgd.min.js',
-        'src/libs/imagefill/js/jquery-imagefill.js',
-        'src/libs/owl.carousel/dist/owl.carousel.min.js',
+        'src/libs/jquery-imagefill.js',
+        'src/libs/owl.carousel.min.js',
         // 
         // add use js libs here in right order
     ])
     .pipe(concat('libs.min.js'))
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest('src/js')) 
 });
 
+
+// CSS minifying
+
 gulp.task('css-min', ['sass'], function() {
-    return gulp.src('src/css/main.css')
+    return gulp.src([
+        'src/css/main.css',
+        'src/css/ie8.css',
+    ])
     .pipe(sourcemaps.init())
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('src/css'));
 });
+
+
+// Live reload in browser
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -63,6 +77,9 @@ gulp.task('browser-sync', function() {
     });
 });
 
+
+// Help task for Build
+
 gulp.task('clean', function() {
     return del.sync('dist');
 });
@@ -70,6 +87,9 @@ gulp.task('clean', function() {
 gulp.task('clear', function() {
     return cache.clearAll();
 });
+
+
+// Image optimizing
 
 gulp.task('img', function() {
     return gulp.src('src/img/**/*')
@@ -82,31 +102,41 @@ gulp.task('img', function() {
         .pipe(gulp.dest('dist/img'));
 });
 
+
+// Sprite generator
+
 gulp.task('sprite', function () {
-  var spriteData = gulp.src('src/img/ico*.png').pipe(spritesmith({
-    imgName: 'sprite.png',
-    cssName: 'sprite.css',
-    padding: 10,
-  }));
-  return spriteData.pipe(gulp.dest('src/css/'));
+    var spriteData = gulp.src('src/img/ico*.png')
+        .pipe(spritesmith({
+            imgName: 'sprite.png',
+            imgPath: '../img/sprite.png',
+            cssName: 'sprite.css',
+            padding: 10,
+        }));
+    spriteData.css.pipe(gulp.dest('src/css/'));
+    spriteData.img.pipe(gulp.dest('src/img/'));
+    return;
 });
 
 
+// Watcher (Really cool thing)
+
 gulp.task('watch', ['browser-sync', 'css-min', 'scripts'], function() {
-    gulp.watch('src/sass/**/*.sass', ['sass'])
-    .on('change', function(event) {
-        console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-    });
+    gulp.watch('src/sass/**/*.sass', ['sass']);
     gulp.watch('src/libs/**/*.js', ['scripts']);
     gulp.watch('src/js/**/*.js').on('change', browserSync.reload);
     gulp.watch('src/*.html').on('change', browserSync.reload);
 });
+
+
+// Build project
 
 gulp.task('build', ['clean', 'img' ,'css-min', 'scripts'], function() {
     
     var buildCss = gulp.src([
             'src/css/main.css',
             'src/css/main.min.css',
+            'src/css/ie8.min.css',
         ])
         .pipe(gulp.dest('dist/css'));
 
@@ -115,6 +145,12 @@ gulp.task('build', ['clean', 'img' ,'css-min', 'scripts'], function() {
 
     var buildJs = gulp.src('src/js/**/*')
         .pipe(gulp.dest('dist/js'));
+
+    var buildJsForIE = gulp.src([
+            'src/libs/html5shiv.min.js',
+            'src/libs/respond.min.js',
+        ])
+        .pipe(gulp.dest('dist/libs'));
 
     var buildHtml = gulp.src('src/*.html')
         .pipe(gulp.dest('dist'));
