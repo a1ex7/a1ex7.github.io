@@ -447,6 +447,7 @@ body {
     border: 2px solid #fff;
     color: #fff;
     border-radius: 18px;
+    behavior: url("../js/pie/PIE.htc");
     padding: 8px 15px;
     font-family: "Montserrat Bold", Arial, sans-serif;
     -webkit-transition: all 0.2s ease;
@@ -477,6 +478,7 @@ body {
     border: 2px solid #ff4e50;
     color: #fff;
     border-radius: 18px;
+    behavior: url("../js/pie/PIE.htc");
     padding: 8px 15px;
     font-family: "Montserrat Bold", Arial, sans-serif;
     -webkit-transition: all 0.2s ease;
@@ -499,6 +501,7 @@ body {
     height: 100%;
     overflow: hidden;
     border-radius: 4px;
+    behavior: url("../js/pie/PIE.htc");
     position: relative;
     z-index: 0; }
     .how-it-works__img:before {
@@ -532,12 +535,14 @@ body {
     border: 2px solid #ff4e50;
     color: #fff;
     border-radius: 18px;
+    behavior: url("../js/pie/PIE.htc");
     padding: 8px 15px;
     font-family: "Montserrat Bold", Arial, sans-serif;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     padding: 3px 13px;
     border-radius: 10px;
+    behavior: url("../js/pie/PIE.htc");
     text-transform: uppercase;
     font-size: 10px;
     letter-spacing: 1.6px; }
@@ -572,7 +577,8 @@ body {
     margin: 10px auto;
     position: relative; }
     .partners__photo img {
-      border-radius: 50%; }
+      border-radius: 50%;
+      behavior: url("../js/pie/PIE.htc"); }
   .partners__label {
     display: block;
     position: absolute;
@@ -582,6 +588,7 @@ body {
     height: 40px;
     padding: 7px;
     border-radius: 50%;
+    behavior: url("../js/pie/PIE.htc");
     background-color: #ff4e50;
     border: 4px solid #fff; }
   .partners__partner:nth-of-type(4n+1) .partners__label {
@@ -606,6 +613,7 @@ body {
     border: 2px solid #ff4e50;
     color: #ff4e50;
     border-radius: 18px;
+    behavior: url("../js/pie/PIE.htc");
     padding: 8px 15px;
     font-family: "Montserrat Bold", Arial, sans-serif;
     -webkit-transition: all 0.2s ease;
@@ -626,6 +634,7 @@ body {
     height: 120px;
     background-color: #333;
     border-radius: 4px;
+    behavior: url("../js/pie/PIE.htc");
     overflow: hidden;
     position: relative;
     float: left; }
@@ -672,6 +681,7 @@ body {
     height: 2.85714em;
     border: 1px solid #ccc;
     border-radius: 4px;
+    behavior: url("../js/pie/PIE.htc");
     box-shadow: 0 1px 0 #eee;
     font-size: 14px;
     padding: 13px; }
@@ -687,6 +697,7 @@ body {
     border: 2px solid #ff4e50;
     color: #fff;
     border-radius: 18px;
+    behavior: url("../js/pie/PIE.htc");
     padding: 8px 15px;
     font-family: "Montserrat Bold", Arial, sans-serif;
     -webkit-transition: all 0.2s ease;
