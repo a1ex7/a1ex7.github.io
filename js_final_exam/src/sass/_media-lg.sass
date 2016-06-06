@@ -57,4 +57,13 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-  /*
+  /*  */
+  
+/* Retina */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+  .promo
+    background: url('../img/bg-cover.png'), url('../img/bg-header@2x.jpg')
+    background-size: 1440px 700px
+    background-position: 0 0, center center
+    background-repeat: repeat, no-repeat
+    background-size: cover

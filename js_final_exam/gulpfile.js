@@ -109,7 +109,10 @@ gulp.task('sprite', function () {
     var spriteData = gulp.src('src/img/ico*.png')
         .pipe(spritesmith({
             imgName: 'sprite.png',
+            retinaImgName: 'sprite@2x.png',
+            retinaSrcFilter: ['src/img/ico*@2x.png'],
             imgPath: '../img/sprite.png',
+            retinaImgPath: '../img/sprite@2x.png',
             cssName: 'sprite.css',
             padding: 10,
         }));

@@ -52,3 +52,31 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   width: 18px;
   height: 18px;
 }
+
+@media (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .icon-ico-lab {
+    background-image: url(../img/sprite@2x.png);
+    background-size: 98px 84px;
+  }
+  .icon-ico-left-arrow {
+    background-image: url(../img/sprite@2x.png);
+    background-size: 98px 84px;
+  }
+  .icon-ico-right-arrow {
+    background-image: url(../img/sprite@2x.png);
+    background-size: 98px 84px;
+  }
+  .icon-ico-send {
+    background-image: url(../img/sprite@2x.png);
+    background-size: 98px 84px;
+  }
+  .icon-ico-tea {
+    background-image: url(../img/sprite@2x.png);
+    background-size: 98px 84px;
+  }
+  .icon-ico-tv {
+    background-image: url(../img/sprite@2x.png);
+    background-size: 98px 84px;
+  }
+}
